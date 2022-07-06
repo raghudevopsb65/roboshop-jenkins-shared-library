@@ -1,6 +1,4 @@
 def call() {
-  print env.TAG_NAME
-
   node() {
 
     common.pipelineInit()
@@ -12,7 +10,7 @@ def call() {
       '''
     }
 
-    if( BRANCH_NAME == TAG_NAME )
+    if( env.BRANCH_NAME == env.TAG_NAME )
     {
       sh 'echo Yes TAG'
     }
