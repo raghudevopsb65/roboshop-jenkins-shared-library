@@ -1,5 +1,5 @@
 def call() {
-  if (! binding.hasVariable('superVariable')) {
+  if (! binding.hasVariable('TAG_NAME')) {
     def TAG_NAME = null
   }
   node() {
