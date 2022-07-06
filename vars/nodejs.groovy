@@ -10,6 +10,7 @@ def call() {
       '''
     }
 
+    sh 'env'
     //common.publishArtifacts()
 
   }
