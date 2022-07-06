@@ -10,5 +10,7 @@ def call() {
       '''
     }
 
+    //common.publishArtifacts()
+
   }
 }
