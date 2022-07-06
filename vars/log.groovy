@@ -37,7 +37,7 @@ def call() {
     stage('Two') {
       sh 'echo Two - ${COMPONENT}'
     }
-    
+
   }
 }
 
