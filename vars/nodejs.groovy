@@ -1,5 +1,7 @@
 def call() {
-  def TAG_NAME = null
+  if (! binding.hasVariable('superVariable')) {
+    def TAG_NAME = null
+  }
   node() {
 
     common.pipelineInit()
