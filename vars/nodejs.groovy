@@ -1,7 +1,6 @@
 def call() {
-  def optVar = binding.variables.get("TAG_NAME")
-  print optVar
-  
+  print env.TAG_NAME
+
   node() {
 
     common.pipelineInit()
