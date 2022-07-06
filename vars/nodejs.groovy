@@ -1,4 +1,5 @@
 def call() {
+  def TAG_NAME = null
   node() {
 
     common.pipelineInit()
