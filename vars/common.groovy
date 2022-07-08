@@ -45,7 +45,7 @@ def codeChecks() {
   stage('Quality Checks & Unit Tests') {
     parallel([
         qualityChecks: {
-          sh "sonar-scanner -Dsonar.projectKey=myproject"
+          sh "sonar-scanner -Dsonar.projectKey=${COMPONENT}"
         },
         unitTests: {
           unitTests()
