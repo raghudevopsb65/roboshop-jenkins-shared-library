@@ -48,8 +48,35 @@ def codeChecks() {
           echo "hello"
         },
         unitTests: {
-          echo "world"
+          unitTests()
         }
     ])
   }
+}
+
+def unitTests() {
+    if (env.APP_TYPE == "nodejs") {
+      sh """
+        # npm run test 
+        echo Run test cases
+      """
+    }
+    if (env.APP_TYPE == "maven") {
+      sh """
+        # mvn test 
+        echo Run test cases
+      """
+    }
+    if (env.APP_TYPE == "python") {
+      sh """
+        # pythom -m unittest
+        echo Run test cases
+      """
+    }
+    if (env.APP_TYPE == "nginx") {
+      sh """
+        # npm run test 
+        echo Run test cases
+      """
+    }
 }
