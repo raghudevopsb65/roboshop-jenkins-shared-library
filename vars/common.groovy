@@ -40,6 +40,10 @@ def publishArtifacts() {
     }
   }
 
+  stage('Deploy to Dev Env') {
+
+  }
+
 }
 
 def codeChecks() {
