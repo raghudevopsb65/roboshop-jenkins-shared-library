@@ -6,7 +6,7 @@ def pipelineInit() {
 }
 
 def publishArtifacts() {
-  var.ENV = "dev"
+  env.ENV = "dev"
   stage("Prepare Artifacts"){
     if (env.APP_TYPE == "nodejs") {
       sh """
