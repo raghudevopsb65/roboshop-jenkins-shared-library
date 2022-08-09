@@ -17,6 +17,8 @@ def call() {
     if( env.BRANCH_NAME == env.TAG_NAME )
     {
       common.publishArtifacts()
+      // This is added for Immutable Approach
+      common.publishAMI()
     }
 
   }

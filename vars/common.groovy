@@ -134,3 +134,10 @@ def unitTests() {
       """
     }
 }
+
+def publishAMI() {
+  sh '''
+    terraform init 
+    terraform apply -auto-approve
+  '''
+}
