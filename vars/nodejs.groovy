@@ -16,7 +16,7 @@ def call() {
     // If both are equal then it is definitely a tag
     if( env.BRANCH_NAME == env.TAG_NAME )
     {
-      common.publishArtifacts()
+      common.publishLocalArtifacts()
       // This is added for Immutable Approach
       common.publishAMI()
     }
