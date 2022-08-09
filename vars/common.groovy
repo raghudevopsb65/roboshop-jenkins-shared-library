@@ -136,8 +136,10 @@ def unitTests() {
 }
 
 def publishAMI() {
-  sh '''
-    terraform init 
-    terraform apply -auto-approve
-  '''
+  stage('Publish AMI') {
+    sh '''
+      terraform init 
+      terraform apply -auto-approve
+    '''
+  }
 }
